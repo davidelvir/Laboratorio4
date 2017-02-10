@@ -22,6 +22,11 @@ public class Duende extends Pieza{
         return "D";
     }
 
+    @Override
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+        
+    }
+
     
     
 }
