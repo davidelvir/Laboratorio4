@@ -2,12 +2,13 @@ package lab4;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Lab4 {
 
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
         Pieza tablero[][] = new Pieza[10][10];
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
@@ -82,7 +83,17 @@ public class Lab4 {
                 jugadores.remove(pos);
             }
             if (opcion.equalsIgnoreCase("d")) {
-
+                char s = 't';
+                while (s == 't') {
+                    System.out.println("Ingrese posicion I posicion a  mover[0-9]: ");
+                    int i = input.nextInt();
+                    System.out.println("Ingrese posicion J posicion a mover[0-9]: ");
+                    int j = input.nextInt();
+                    System.out.println("Ingrese posicion X para mover[0-9]: ");
+                    int x = input.nextInt();
+                    System.out.println("Ingrese posicion Y para mover[0-9]: ");
+                    int y = input.nextInt();
+                }
             }
         }
     }
