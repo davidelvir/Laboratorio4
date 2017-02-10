@@ -27,7 +27,7 @@ public class Rey extends Pieza{
     }
 
     @Override
-    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion {
         if(x!=i || y!=j){
             throw new Excepcion("El rey no se puede mover");
         }

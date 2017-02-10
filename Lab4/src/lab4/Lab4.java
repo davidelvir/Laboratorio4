@@ -3,6 +3,8 @@ package lab4;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class Lab4 {
@@ -43,13 +45,7 @@ public class Lab4 {
                 }
             }
         }
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                System.out.print(tablero[i][j] + "\t");
-            }
-            System.out.println("");
-        }
-
+        //imprimir(tablero);
         String opcion = " ";
         ArrayList<Jugador> jugadores = new ArrayList();
         while (!opcion.equalsIgnoreCase("e")) {
@@ -83,8 +79,9 @@ public class Lab4 {
                 jugadores.remove(pos);
             }
             if (opcion.equalsIgnoreCase("d")) {
-                char s = 't';
-                while (s == 't') {
+                char s = 's';
+                while (s == 's'|| s == 'S') {
+                    imprimir(tablero);
                     System.out.println("Ingrese posicion I posicion a  mover[0-9]: ");
                     int i = input.nextInt();
                     System.out.println("Ingrese posicion J posicion a mover[0-9]: ");
@@ -93,8 +90,23 @@ public class Lab4 {
                     int x = input.nextInt();
                     System.out.println("Ingrese posicion Y para mover[0-9]: ");
                     int y = input.nextInt();
+                    try {
+                        tablero[i][j].movimiento(tablero, i, j, x, y);
+                    } catch (Excepcion ex) {
+                        ex.getMessage();
+                    }
+                    System.out.println("Desea seguir ?(s/n)");
+                    s = input.next().charAt(0);
                 }
             }
+        }
+    }
+    static public void imprimir(Pieza tablero [][]){
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(tablero[i][j] + "\t");
+            }
+            System.out.println("");
         }
     }
 

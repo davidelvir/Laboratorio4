@@ -27,7 +27,7 @@ public class Arquero extends Pieza{
     }
 
     @Override
-    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion {
         if(tablero[x][y].getColor().equals(tablero[i][j].getColor())){
             throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
         }else{

@@ -17,7 +17,7 @@ public class Espacio extends Pieza {
     }
 
     public Espacio(Color color, String material) {
-        super(color, material);
+        super(Color.BLUE, material);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Espacio extends Pieza {
     }
 
     @Override
-    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion {
         return tablero;
     }
     
