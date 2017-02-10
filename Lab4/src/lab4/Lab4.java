@@ -11,7 +11,7 @@ public class Lab4 {
         Pieza tablero[][] = new Pieza[10][10];
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
-<<<<<<< HEAD
+
                 if((i == 0 && j == 0)||(i == 0 && j == tablero.length-1)){
                     tablero[i][j] = new Caballero(Color.BLACK,"madera");
                 }else if((i == tablero.length-1 && j== 0)||(i==tablero.length-1 && j == tablero.length-1)){
@@ -32,15 +32,7 @@ public class Lab4 {
                     tablero[i][j] = new Mago(Color.BLACK,"madera");
                 }else if(i == tablero.length-1 && j == 4){
                     tablero[i][j] = new Mago(Color.WHITE,"madera");
-                }
-                else{
-=======
-                if ((i == 0 && j == 0) || (i == 0 && j == tablero.length - 1)) {
-                    tablero[i][j] = new Duende(Color.BLACK, "madera");
-                } else if ((i == tablero.length - 1 && j == 0) || (i == tablero.length - 1 && j == tablero.length - 1)) {
-                    tablero[i][j] = new Duende(Color.WHITE, "madera");
-                } else {
->>>>>>> c7822385aed360d34f08e0c770ec994139aca519
+                }else {
                     tablero[i][j] = new Pieza();
                 }
             }
