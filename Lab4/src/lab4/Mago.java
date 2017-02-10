@@ -24,5 +24,10 @@ public class Mago extends Pieza{
     public String toString() {
         return "M";
     }
+
+    @Override
+    public void movimiento(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

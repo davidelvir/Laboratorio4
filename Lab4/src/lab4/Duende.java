@@ -21,5 +21,10 @@ public class Duende extends Pieza{
     public String toString() {
         return "D";
     }
+
+    @Override
+    public void movimiento(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

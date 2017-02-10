@@ -11,24 +11,24 @@ import java.awt.Color;
  *
  * @author usuario
  */
-public class Arquero extends Pieza{
+public class Espacio extends Pieza {
 
-    public Arquero() {
-        super();
+    public Espacio() {
     }
 
-    public Arquero(Color color, String material) {
+    public Espacio(Color color, String material) {
         super(color, material);
     }
 
     @Override
     public String toString() {
-        return "A";
+        return "";
     }
+    
 
     @Override
     public void movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
 }

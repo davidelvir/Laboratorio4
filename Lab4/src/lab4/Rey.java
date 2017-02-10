@@ -25,5 +25,10 @@ public class Rey extends Pieza{
     public String toString() {
         return "R";
     }
+
+    @Override
+    public void movimiento(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

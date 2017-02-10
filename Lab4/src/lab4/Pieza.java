@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author David
  */
-public class Pieza {
+public abstract class Pieza  {
     private Color color;
     private String material;
 
@@ -43,6 +43,6 @@ public class Pieza {
     public String toString() {
         return "";
     }
-    
+    public abstract void movimiento(int x, int y);
     
 }

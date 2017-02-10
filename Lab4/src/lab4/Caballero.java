@@ -24,5 +24,12 @@ public class Caballero extends Pieza{
     public String toString() {
         return "C";
     }
+
+    @Override
+    public void movimiento(int x, int y) {
+        
+    }
+
+    
     
 }

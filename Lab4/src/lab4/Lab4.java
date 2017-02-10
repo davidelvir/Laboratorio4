@@ -33,7 +33,7 @@ public class Lab4 {
                 }else if(i == tablero.length-1 && j == 4){
                     tablero[i][j] = new Mago(Color.WHITE,"madera");
                 }else {
-                    tablero[i][j] = new Pieza();
+                    tablero[i][j] = new Espacio();
                 }
             }
         }
