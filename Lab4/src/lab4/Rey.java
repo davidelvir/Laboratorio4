@@ -34,6 +34,8 @@ public class Rey extends Pieza{
         return tablero;
     }
 
-    
+   public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) {
+        return tablero;
+    } 
     
 }

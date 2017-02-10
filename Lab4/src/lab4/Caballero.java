@@ -41,6 +41,11 @@ public class Caballero extends Pieza{
         return tablero;
     }
 
+    @Override
+    public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) {
+        return tablero;
+    }
+
     
     
 }

@@ -45,6 +45,6 @@ public abstract class Pieza  {
     }
 
     public abstract Pieza[][] movimiento(Pieza tablero [][],int i,int j, int x, int y)throws Excepcion;
-
+    public abstract Pieza[][] comer(Pieza tablero [][],int i,int j, int x, int y);
     
 }

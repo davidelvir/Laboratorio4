@@ -80,8 +80,8 @@ public class Lab4 {
             }
             if (opcion.equalsIgnoreCase("d")) {
                 char s = 's';
+                imprimir(tablero);
                 while (s == 's'|| s == 'S') {
-                    imprimir(tablero);
                     System.out.println("Ingrese posicion I posicion a  mover[0-9]: ");
                     int i = input.nextInt();
                     System.out.println("Ingrese posicion J posicion a mover[0-9]: ");
@@ -95,6 +95,8 @@ public class Lab4 {
                     } catch (Excepcion ex) {
                         System.out.println(ex.getMessage());
                     }
+                    
+                    imprimir(tablero);
                     System.out.println("Desea seguir ?(s/n)");
                     s = input.next().charAt(0);
                 }
