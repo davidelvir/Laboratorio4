@@ -93,7 +93,7 @@ public class Lab4 {
                     try {
                         tablero[i][j].movimiento(tablero, i, j, x, y);
                     } catch (Excepcion ex) {
-                        ex.getMessage();
+                        System.out.println(ex.getMessage());
                     }
                     System.out.println("Desea seguir ?(s/n)");
                     s = input.next().charAt(0);

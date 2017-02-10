@@ -27,7 +27,7 @@ public class Mago extends Pieza{
 
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion {
-        if(tablero[x][y].getColor().equals(tablero[i][j].getColor())){
+        if(tablero[i][j].getColor().equals(tablero[x][y].getColor())){
             throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
         }else{
             tablero[x][y] = tablero [i][j];
