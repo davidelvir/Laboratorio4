@@ -43,12 +43,7 @@ public class Caballero extends Pieza{
 
     @Override
     public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion{
-        if (tablero[i+2][j].getColor().equals(tablero[i][j].getColor())){
-            
-        }else{
-            tablero[i+2][j]=new Espacio();
-        }
-        return tablero;
+       return tablero;
     }
 
     
