@@ -5,6 +5,7 @@ public class Lab4 {
 
     
     public static void main(String[] args) {
+
         
         Pieza tablero [][] = new Pieza[10][10];
         for (int i = 0; i < tablero.length; i++) {
@@ -12,6 +13,7 @@ public class Lab4 {
                 
             }
         }
+
     }
     
 }
