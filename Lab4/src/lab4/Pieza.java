@@ -43,6 +43,6 @@ public abstract class Pieza  {
     public String toString() {
         return "";
     }
-    public abstract void movimiento(int x, int y);
+    public abstract void movimiento(int i,int j, int x, int y);
     
 }

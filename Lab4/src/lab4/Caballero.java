@@ -25,9 +25,15 @@ public class Caballero extends Pieza{
         return "C";
     }
 
-    @Override
-    public void movimiento(int x, int y) {
-        
+    
+    public boolean movimiento(int i,int j,int x, int y) {
+        if(j == y && ((i+1==x || i-1==x))){
+            return true;
+        }else if(i == x &&((j+1==y || j-1 == y))){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     
