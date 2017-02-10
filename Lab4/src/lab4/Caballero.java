@@ -26,14 +26,19 @@ public class Caballero extends Pieza{
     }
 
     
-    public boolean movimiento(int i,int j,int x, int y) {
-        if(j == y && ((i+1==x || i-1==x))){
-            return true;
+    public Pieza[][] movimiento(Pieza tablero[][],int i,int j,int x, int y) throws Excepcion{
+        if(tablero[x][y].getColor().equals(tablero[i][j].getColor())){
+            throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
+        }else if(j == y && ((i+1==x || i-1==x))){
+            tablero[x][y]=tablero[i][j];
+            tablero[i][j] = new Espacio();
         }else if(i == x &&((j+1==y || j-1 == y))){
-            return true;
+            tablero[x][y]=tablero[i][j];
+            tablero[i][j] = new Espacio();
         }else{
-            return false;
+           throw new Excepcion("Nueva posicion no valida"); 
         }
+        return tablero;
     }
 
     
