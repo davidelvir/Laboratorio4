@@ -12,27 +12,32 @@ public class Lab4 {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
 
-                if((i == 0 && j == 0)||(i == 0 && j == tablero.length-1)){
-                    tablero[i][j] = new Caballero(Color.BLACK,"madera");
-                }else if((i == tablero.length-1 && j== 0)||(i==tablero.length-1 && j == tablero.length-1)){
-                    tablero[i][j] = new Caballero(Color.WHITE,"madera");
-                }else if((i == 0 && j == 2)||(i == 0 && j == 7)){
-                    tablero[i][j] = new Dragon(Color.BLACK,"madera");
-                }else if((i == tablero.length-1 && j == 2)||(i == tablero.length-1 && j == 7)){
-                    tablero[i][j] = new Dragon(Color.WHITE,"madera");
-                }else if((i == 0 && j == 3)||(i==0 && j == 6)||(i == 1 && j == 2)||(i == 1 && j == 7)){
-                    tablero[i][j] = new Arquero(Color.BLACK,"madera");
-                }else if((i == tablero.length-1 && j == 3)||(i==tablero.length-1 && j == 6)||(i == 8 && j == 2)||(i == 8 && j == 7)){
-                    tablero[i][j] = new Arquero(Color.WHITE,"madera");
-                }else if(i == 0 && j == 4){
-                    tablero[i][j] = new Rey(Color.BLACK,"madera");
-                }else if(i == tablero.length-1 && j == 5){
-                    tablero[i][j] = new Rey(Color.WHITE,"madera");
-                }else if(i == 0 && j == 5){
-                    tablero[i][j] = new Mago(Color.BLACK,"madera");
-                }else if(i == tablero.length-1 && j == 4){
-                    tablero[i][j] = new Mago(Color.WHITE,"madera");
-                }else {
+                if ((i == 0 && j == 0) || (i == 0 && j == tablero.length - 1) || (i == 1 && j == 4)) {
+                    tablero[i][j] = new Caballero(Color.BLACK, "madera");
+                } else if ((i == tablero.length - 1 && j == 0) || (i == tablero.length - 1 && j == tablero.length - 1) || (i == 8 && j == 5)) {
+                    tablero[i][j] = new Caballero(Color.WHITE, "madera");
+                } else if ((i == 0 && j == 2) || (i == 0 && j == 7) || (i == 1 && j == 5)) {
+                    tablero[i][j] = new Dragon(Color.BLACK, "madera");
+                } else if ((i == tablero.length - 1 && j == 2) || (i == tablero.length - 1 && j == 7) || (i == 8 && j == 4)) {
+                    tablero[i][j] = new Dragon(Color.WHITE, "madera");
+                } else if ((i == 0 && j == 3) || (i == 0 && j == 6) || (i == 1 && j == 2) || (i == 1 && j == 7)) {
+                    tablero[i][j] = new Arquero(Color.BLACK, "madera");
+                } else if ((i == tablero.length - 1 && j == 3) || (i == tablero.length - 1 && j == 6) || (i == 8 && j == 2) || (i == 8 && j == 7)) {
+                    tablero[i][j] = new Arquero(Color.WHITE, "madera");
+                } else if (i == 0 && j == 4) {
+                    tablero[i][j] = new Rey(Color.BLACK, "madera");
+                } else if (i == tablero.length - 1 && j == 5) {
+                    tablero[i][j] = new Rey(Color.WHITE, "madera");
+                } else if (i == 0 && j == 5) {
+                    tablero[i][j] = new Mago(Color.BLACK, "madera");
+                } else if (i == tablero.length - 1 && j == 4) {
+                    tablero[i][j] = new Mago(Color.WHITE, "madera");
+
+                } else if (i == 1 && ((j == 0) || j == 3 || j == tablero.length - 1 || j == 6)) {
+                    tablero[i][j] = new Duende(Color.BLACK, "madera");
+                } else if (i == 8 && ((j == 0) || j == 3 || j == tablero.length - 1 || j == 6)) {
+                    tablero[i][j] = new Duende(Color.WHITE, "madera");
+                } else {
                     tablero[i][j] = new Espacio();
                 }
             }
@@ -73,11 +78,11 @@ public class Lab4 {
                 JOptionPane.showMessageDialog(null, p1);
             }
             if (opcion.equalsIgnoreCase("c")) {
-                int pos=Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
+                int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar: "));
                 jugadores.remove(pos);
             }
-            if (opcion.equalsIgnoreCase("d")){
-                
+            if (opcion.equalsIgnoreCase("d")) {
+
             }
         }
     }
