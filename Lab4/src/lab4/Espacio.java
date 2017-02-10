@@ -24,11 +24,13 @@ public class Espacio extends Pieza {
     public String toString() {
         return "";
     }
-    
 
     @Override
-    public void movimiento(int x, int y) {
-        
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+        return tablero;
     }
+    
+
+    
     
 }
