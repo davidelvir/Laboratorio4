@@ -35,7 +35,7 @@ public class Duende extends Pieza{
         }
         return tablero;
     }
-public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) {
+public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion{
         return tablero;
     }
     

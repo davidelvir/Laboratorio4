@@ -37,7 +37,7 @@ public class Mago extends Pieza{
     }
 
     @Override
-    public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) {
+    public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion{
         return tablero;
     }
 
