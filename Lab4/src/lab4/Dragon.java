@@ -38,6 +38,25 @@ public class Dragon extends Pieza{
         return tablero;
     }
 public Pieza[][] comer(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion{
+        if(i+1>9||i-1<0||j+1>9||j-1<0||i+2>9||i-2<0||j+2>9||j-2<0){
+            throw new Excepcion("Se salio de la matriz");
+        }else if(!tablero[i+1][j].getColor().equals(tablero[i][j].getColor())){
+            tablero[i+1][j] = new Espacio();
+        }else if(!tablero[i-1][j].getColor().equals(tablero[i][j].getColor())){
+            tablero[i-1][j] = new Espacio();
+        }else if(!tablero[i][j+1].getColor().equals(tablero[i][j].getColor())){
+            tablero[i][j+1] = new Espacio();
+        }else if(!tablero[i][j-1].getColor().equals(tablero[i][j].getColor())){
+            tablero[i][j-1] = new Espacio();
+        }else if(!tablero[i+2][j+2].getColor().equals(tablero[i][j].getColor())){
+            tablero[i+2][j+2] = new Espacio();
+        }else if(!tablero[i-2][j-2].getColor().equals(tablero[i][j].getColor())){
+            tablero[i-2][j-2] = new Espacio();
+        }else if(!tablero[i+2][j-2].getColor().equals(tablero[i][j].getColor())){
+            tablero[i+2][j-2] = new Espacio();
+        }else if(!tablero[i-2][j+2].getColor().equals(tablero[i][j].getColor())){
+            tablero[i-2][j+2] = new Espacio();
+        }
         return tablero;
     }
     
