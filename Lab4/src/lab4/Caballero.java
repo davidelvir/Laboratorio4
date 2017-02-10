@@ -22,7 +22,7 @@ public class Caballero extends Pieza{
 
     @Override
     public String toString() {
-        return "F";
+        return "C";
     }
     
 }
