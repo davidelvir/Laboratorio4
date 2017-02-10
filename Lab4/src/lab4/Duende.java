@@ -25,7 +25,10 @@ public class Duende extends Pieza{
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Excepcion {
 
-        if(tablero[i][j].getColor().equals(tablero[x][y].getColor())){
+        if(x<0||x>9||y<0||y>9){
+            throw new Excepcion("Contacte al administrador. Fuera de la ");
+        }
+        else if(tablero[i][j].getColor().equals(tablero[x][y].getColor())){
             throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
         }else if(x == i+1){
             tablero[x][y] = tablero [i][j];

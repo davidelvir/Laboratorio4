@@ -92,6 +92,7 @@ public class Lab4 {
                     int y = input.nextInt();
                     try {
                         tablero[i][j].movimiento(tablero, i, j, x, y);
+                        tablero[i][j].comer(tablero, i, j, x, y);
                     } catch (Excepcion ex) {
                         System.out.println(ex.getMessage());
                     }
