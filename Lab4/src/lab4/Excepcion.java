@@ -10,5 +10,9 @@ package lab4;
  * @author David
  */
 public class Excepcion extends Exception{
+
+    public Excepcion(String string) {
+        super(string);
+    }
     
 }
