@@ -5,10 +5,21 @@
  */
 package lab4;
 
+import java.awt.Color;
+
 /**
  *
  * @author David
  */
-public class Duende {
+public class Duende extends Pieza{
+
+    public Duende(Color color, String material) {
+        super(color, material);
+    }
+
+    @Override
+    public String toString() {
+        return "D";
+    }
     
 }
