@@ -27,8 +27,13 @@ public class Rey extends Pieza{
     }
 
     @Override
-    public void movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+        if(x!=i || y!=j){
+            throw new Excepcion("El rey no se puede mover");
+        }
+        return tablero;
     }
+
+    
     
 }

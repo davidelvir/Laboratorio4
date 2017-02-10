@@ -27,8 +27,16 @@ public class Arquero extends Pieza{
     }
 
     @Override
-    public void movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+        if(tablero[x][y].getColor().equals(tablero[i][j].getColor())){
+            throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
+        }else{
+            tablero[x][y] = tablero [i][j];
+            tablero[i][j] = new Espacio();
+        }
+        return tablero;
     }
+
+    
     
 }

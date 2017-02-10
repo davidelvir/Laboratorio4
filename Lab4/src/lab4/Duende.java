@@ -22,6 +22,19 @@ public class Duende extends Pieza{
         return "D";
     }
 
+    @Override
+    public Pieza[][] movimiento(Pieza[][] tablero, int i, int j, int x, int y) throws Exception {
+        if(tablero[x][y].getColor().equals(tablero[i][j].getColor())){
+            throw new Excepcion("Pieza del mismo equipo en esa posicion. No se movio!");
+        }else if(x == i+1){
+            tablero[x][y] = tablero [i][j];
+            tablero[i][j] = new Espacio();
+        }else{
+            throw new Excepcion("Movimiento no valido, no se movio!");
+        }
+        return tablero;
+    }
+
     
     
 }
