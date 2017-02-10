@@ -43,6 +43,8 @@ public abstract class Pieza  {
     public String toString() {
         return "";
     }
+
     public abstract Pieza[][] movimiento(Pieza tablero [][],int i,int j, int x, int y)throws Exception;
+
     
 }
